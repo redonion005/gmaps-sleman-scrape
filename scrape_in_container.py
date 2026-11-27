@@ -107,7 +107,6 @@ async def main():
     # Headless browser (already in container)
     browser = Browser(
         headless=True,
-        disable_security=True,
         args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
     )
 
