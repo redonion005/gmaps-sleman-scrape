@@ -1,0 +1,27 @@
+{
+  "pilot_corridors": {
+    "tier_1": {
+      "corridor_id": "R053_Jalan_Teknika_Utara",
+      "road_name": "Jalan Teknika Utara",
+      "tier": "Tier 1",
+      "venue_count": 296,
+      "selection_reason": "Densest Tier 1 corridor by baseline venue count"
+    },
+    "tier_2": {
+      "corridor_id": "R066_Jalan_Pandega_Marta",
+      "road_name": "Jalan Pandega Marta",
+      "tier": "Tier 2",
+      "venue_count": 372,
+      "selection_reason": "Densest Tier 2 corridor by baseline venue count"
+    },
+    "tier_3": {
+      "corridor_id": "R055_Jalan_Sawit_Sari",
+      "road_name": "Jalan Sawit Sari",
+      "tier": "Tier 3",
+      "venue_count": 333,
+      "selection_reason": "Densest Tier 3 corridor by baseline venue count"
+    }
+  },
+  "selection_timestamp": "{\"auto\": true}",
+  "total_queries_pilot": 70
+}

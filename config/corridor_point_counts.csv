@@ -1,0 +1,120 @@
+corridor_id,road_name,tier,n_interval_points,n_baseline_points,total_points,geometry_status,geometry_source
+R001_Jalan_Padjajaran,Jalan Padjajaran,Tier 2,1466,137,1603,success,baseline_approx
+R002_Jalan_Siliwangi,Jalan Siliwangi,Tier 3,321,55,376,success,baseline_approx
+R003_Jalan_Palagan_Tentara_Pelajar,Jalan Palagan Tentara Pelajar,Tier 3,1898,113,2011,success,baseline_approx
+R004_Jalan_Magelang,Jalan Magelang,Tier 2,2068,126,2194,success,baseline_approx
+R005_Jalan_Affandi,Jalan Affandi,Tier 2,390,56,446,success,baseline_approx
+R006_Jalan_Laksda_Adisucipto,Jalan Laksda Adisucipto,Tier 2,821,89,910,success,baseline_approx
+R007_Jalan_Kaliurang,Jalan Kaliurang,Tier 1,76,22,98,success,baseline_approx
+R008_Jalan_Pangeran_Mangkubumi,Jalan Pangeran Mangkubumi,Tier 2,1200,97,1297,success,baseline_approx
+R009_Jalan_Kyai_Mojo,Jalan Kyai Mojo,Tier 3,1899,129,2028,success,baseline_approx
+R010_Jalan_Jenderal_Sudirman,Jalan Jenderal Sudirman,Tier 1,126,16,142,success,baseline_approx
+R011_Jalan_Abu_Bakar_Ali,Jalan Abu Bakar Ali,Tier 2,1818,127,1945,success,baseline_approx
+R012_Jalan_Colombo,Jalan Colombo,Tier 1,124,17,141,success,baseline_approx
+R013_Jalan_Cik_di_Tiro,Jalan Cik di Tiro,Tier 1,158,16,174,success,baseline_approx
+R014_Jalan_Persatuan,Jalan Persatuan,Tier 1,152,21,173,success,baseline_approx
+R015_Jalan_Nyi_Tjondro_Loekito,Jalan Nyi Tjondro Loekito,Tier 1,199,18,217,success,baseline_approx
+R016_Jalan_Tentara_Rakyat_Mataram,Jalan Tentara Rakyat Mataram,Tier 3,1493,100,1593,success,baseline_approx
+R017_Jalan_Diponegoro,Jalan Diponegoro,Tier 2,1350,98,1448,success,baseline_approx
+R018_Jalan_Tentara_Pelajar,Jalan Tentara Pelajar,Tier 2,1525,107,1632,success,baseline_approx
+R019_Jalan_Urip_Sumoharjo,Jalan Urip Sumoharjo,Tier 1,50,13,63,success,baseline_approx
+R020_Jalan_Suroto,Jalan Suroto,Tier 1,89,18,107,success,baseline_approx
+R021_Jalan_Mataram,Jalan Mataram,Tier 2,1031,83,1114,success,baseline_approx
+R022_Jalan_Yos_Sudarso,Jalan Yos Sudarso,Tier 1,95,15,110,success,baseline_approx
+R023_Jalan_Margo_Utomo,Jalan Margo Utomo,Tier 2,1866,139,2005,success,baseline_approx
+R024_Jalan_Jlagran_Lor,Jalan Jlagran Lor,Tier 3,1207,101,1308,success,baseline_approx
+R025_Jalan_Pasar_Kembang,Jalan Pasar Kembang,Tier 2,2050,108,2158,success,baseline_approx
+R026_Jalan_Kleringan,Jalan Kleringan,Tier 2,999,83,1082,success,baseline_approx
+R027_Jalan_Terban,Jalan Terban,Tier 1,109,16,125,success,baseline_approx
+R028_Jalan_Selokan_Mataram,Jalan Selokan Mataram,Tier 2,1623,116,1739,success,baseline_approx
+R029_Jalan_Agro,Jalan Agro,Tier 2,917,63,980,success,baseline_approx
+R030_Jalan_Pogung_Kidul,Jalan Pogung Kidul,Tier 2,1464,103,1567,success,baseline_approx
+R031_Jalan_Lempongsari_Raya,Jalan Lempongsari Raya,Tier 3,1478,109,1587,success,baseline_approx
+R032_Jalan_Dokter_Sutomo,Jalan Dokter Sutomo,Tier 3,1679,119,1798,success,baseline_approx
+R033_Jalan_Jambon,Jalan Jambon,Tier 3,1436,108,1544,success,baseline_approx
+R034_Jalan_Dr._Wahidin_Sudirohusodo,Jalan Dr. Wahidin Sudirohusodo,Tier 1,117,20,137,success,baseline_approx
+R035_Jalan_RW._Monginsidi,Jalan RW. Monginsidi,Tier 2,1214,106,1320,success,baseline_approx
+R036_Jalan_Profesor_Dokter_Sardjito,Jalan Profesor Dokter Sardjito,Tier 2,1608,133,1741,success,baseline_approx
+R037_Jalan_Ipda_Tut_Harsono,Jalan Ipda Tut Harsono,Tier 3,1968,118,2086,success,baseline_approx
+R038_Jalan_Sukoharjo,Jalan Sukoharjo,Tier 3,2210,120,2330,success,baseline_approx
+R039_Jalan_Kusbini,Jalan Kusbini,Tier 2,1930,126,2056,success,baseline_approx
+R040_Jalan_Atmosukarto,Jalan Atmosukarto,Tier 1,100,25,125,success,baseline_approx
+R041_Jalan_Cornelis_Simanjuntak,Jalan Cornelis Simanjuntak,Tier 1,174,23,197,success,baseline_approx
+R042_Jalan_Anggajaya_1,Jalan Anggajaya 1,Tier 3,1299,104,1403,success,baseline_approx
+R043_Jalan_Profesor_Doktor_Herman_Johannes,Jalan Profesor Doktor Herman Johannes,Tier 2,1730,134,1864,success,baseline_approx
+R044_Jalan_Malioboro,Jalan Malioboro,Tier 2,1557,88,1645,success,baseline_approx
+R045_Jalan_Langensari,Jalan Langensari,Tier 2,1747,106,1853,success,baseline_approx
+R046_Jalan_Professor_Mukti_Ali,Jalan Professor Mukti Ali,Tier 2,1723,110,1833,success,baseline_approx
+R047_Jalan_Munggur,Jalan Munggur,Tier 2,2756,187,2943,success,baseline_approx
+R048_Jalan_Garuda,Jalan Garuda,Tier 2,1428,100,1528,success,baseline_approx
+R049_Jalan_Pandega_Sakti,Jalan Pandega Sakti,Tier 2,1097,95,1192,success,baseline_approx
+R050_Gang_Hortensia,Gang Hortensia,Tier 2,1036,101,1137,success,baseline_approx
+R051_Jalan_Anyelir,Jalan Anyelir,Tier 2,2383,154,2537,success,baseline_approx
+R052_Jalan_Teknika_Selatan,Jalan Teknika Selatan,Tier 1,1300,113,1413,success,baseline_approx
+R053_Jalan_Teknika_Utara,Jalan Teknika Utara,Tier 1,1194,122,1316,success,baseline_approx
+R054_Jalan_Pandean_Sari/_Gondang_Raya,Jalan Pandean Sari/ Gondang Raya,Tier 3,1420,106,1526,success,baseline_approx
+R055_Jalan_Sawit_Sari,Jalan Sawit Sari,Tier 3,1686,133,1819,success,baseline_approx
+R056_Jalan_Anggajaya_3,Jalan Anggajaya 3,Tier 2,1424,107,1531,success,baseline_approx
+R057_Jalan_Sengkan,Jalan Sengkan,Tier 3,1473,116,1589,success,baseline_approx
+R058_Jalan_Gondang_Raya,Jalan Gondang Raya,Tier 3,1138,93,1231,success,baseline_approx
+R059_Jalan_Ringroad_Utara,Jalan Ringroad Utara,digabung,153,20,173,success,baseline_approx
+R060_Jalan_Perumnas,Jalan Perumnas,Tier 3,1301,112,1413,success,baseline_approx
+R061_Jalan_Inspeksi_Selokan_Mataram,Jalan Inspeksi Selokan Mataram,Tier 2,1192,84,1276,success,baseline_approx
+R062_Jalan_KH._Wahid_Hasyim,Jalan KH. Wahid Hasyim,Tier 3,1054,107,1161,success,baseline_approx
+R063_Jalan_Kesehatan,Jalan Kesehatan,Tier 2,2389,131,2520,success,baseline_approx
+R064_Jalan_Lingkar_Timur_Lembah_UGM,Jalan Lingkar Timur Lembah UGM,Tier 2,1126,92,1218,success,baseline_approx
+R065_Jalan_Tantular,Jalan Tantular,Tier 3,1755,131,1886,success,baseline_approx
+R066_Jalan_Pandega_Marta,Jalan Pandega Marta,Tier 2,1376,124,1500,success,baseline_approx
+R067_Jalan_Kutu_Patran,Jalan Kutu Patran,Tier 3,1853,102,1955,success,baseline_approx
+R068_Jalan_Nyoman_Oka,Jalan Nyoman Oka,Tier 2,2163,121,2284,success,baseline_approx
+R069_Jalan_Kragilan,Jalan Kragilan,Tier 3,2571,140,2711,success,baseline_approx
+R070_Jalan_Timor_Timur,Jalan Timor Timur,Tier 3,1553,111,1664,success,baseline_approx
+R071_Jalan_Faridan_Muridan_Noto,Jalan Faridan Muridan Noto,Tier 2,1061,82,1143,success,baseline_approx
+R072_Jalan_Kompol_Bambang_Suprapto,Jalan Kompol Bambang Suprapto,Tier 3,1700,98,1798,success,baseline_approx
+R073_Jalan_Nologaten,Jalan Nologaten,Tier 3,446,59,505,success,baseline_approx
+R074_Jalan_Sinduadi,Jalan Sinduadi,Tier 3,1202,75,1277,success,baseline_approx
+R075_Jalan_Anggajaya_2,Jalan Anggajaya 2,Tier 3,1202,97,1299,success,baseline_approx
+R076_Jalan_Melati_Wetan,Jalan Melati Wetan,Tier 3,1937,114,2051,success,baseline_approx
+R077_Jalan_Sorowajan_Baru,Jalan Sorowajan Baru,Tier 3,1550,116,1666,success,baseline_approx
+R078_Plemburan,Plemburan,Tier 3,1943,135,2078,success,baseline_approx
+R079_Jalan_Hayam_Wuruk,Jalan Hayam Wuruk,Tier 3,1314,99,1413,success,baseline_approx
+R080_Jalan_Lempuyangan,Jalan Lempuyangan,Tier 2,436,54,490,success,baseline_approx
+R081_Jalan_Cantel_Baru,Jalan Cantel Baru,Tier 3,1042,75,1117,success,baseline_approx
+R082_Jalan_Gondosuli,Jalan Gondosuli,Tier 3,2248,122,2370,success,baseline_approx
+R083_Jalan_Ganesha,Jalan Ganesha,Tier 3,1113,105,1218,success,baseline_approx
+R084_Jalan_M._Djami'at_Dhalar,Jalan M. Djami'at Dhalar,Tier 3,1566,105,1671,success,baseline_approx
+R085_Jalan_Jembatan_Merah,Jalan Jembatan Merah,Tier 2,2390,131,2521,success,baseline_approx
+R086_Jalan_Tunjung,Jalan Tunjung,Tier 3,2249,130,2379,success,baseline_approx
+R087_Jalan_Mas_Suharto,Jalan Mas Suharto,Tier 3,2041,106,2147,success,baseline_approx
+R088_Jalan_Ahmad_Jajuli,Jalan Ahmad Jajuli,Tier 3,2609,135,2744,success,baseline_approx
+R089_Gang_Ambar_Asri,Gang Ambar Asri,Tier 3,2002,119,2121,success,baseline_approx
+R090_Jalan_Bhinneka_Tunggal_Ika,Jalan Bhinneka Tunggal Ika,Tier 2,1497,131,1628,success,baseline_approx
+R091_Jalan_Sosrowijayan,Jalan Sosrowijayan,Tier 3,1420,97,1517,success,baseline_approx
+R092_Jalan_Wongsodirjan,Jalan Wongsodirjan,Tier 3,1708,121,1829,success,baseline_approx
+R093_Jalan_Gowongan_Kidul,Jalan Gowongan Kidul,Tier 3,1268,95,1363,success,baseline_approx
+R094_Jalan_Gandekan_Lor,Jalan Gandekan Lor,Tier 3,1343,85,1428,success,baseline_approx
+R095_Jalan_Mawar,Jalan Mawar,Tier 3,1860,117,1977,success,baseline_approx
+R096_Jalan_Pandean_Sari_III,Jalan Pandean Sari III,Tier 3,620,49,669,success,baseline_approx
+R097_Jalan_Nogopuro,Jalan Nogopuro,Tier 3,90,14,104,success,baseline_approx
+R098_Jalan_Tukangan,Jalan Tukangan,Tier 2,1399,100,1499,success,baseline_approx
+R099_Jalan_Widosari,Jalan Widosari,Tier 3,110,22,132,success,baseline_approx
+R100_Jalan_Soka,Jalan Soka,Tier 3,120,20,140,success,baseline_approx
+R101_Jalan_Suryonegaran,Jalan Suryonegaran,Tier 3,141,16,157,success,baseline_approx
+R102_Jalan_Wirata,Jalan Wirata,Tier 2,2148,138,2286,success,baseline_approx
+R103_Jalan_Bumijo_Tengah,Jalan Bumijo Tengah,Tier 3,88,9,97,success,baseline_approx
+R104_Jalan_Kahar_Muzakir,Jalan Kahar Muzakir,Tier 1,1079,115,1194,success,baseline_approx
+R105_Jalan_Yacaranda,Jalan Yacaranda,Tier 1,1014,98,1112,success,baseline_approx
+R106_Jalan_Mojo,Jalan Mojo,Tier 3,145,18,163,success,baseline_approx
+R107_Jalan_Emplasemen_Lempuyangan,Jalan Emplasemen Lempuyangan,Tier 2,1103,85,1188,success,baseline_approx
+R108_Jalan_Kemuning,Jalan Kemuning,Tier 1,813,90,903,success,baseline_approx
+R109_Jalan_Manggis,Jalan Manggis,Tier 3,97,15,112,success,baseline_approx
+R110_Jalan_Timoho,Jalan Timoho,Tier 3,103,18,121,success,baseline_approx
+R111_Jalan_Trimo,Jalan Trimo,Tier 2,1171,88,1259,success,baseline_approx
+R112_Jalan_Ambar_Madu,Jalan Ambar Madu,Tier 3,74,18,92,success,baseline_approx
+R113_Jalan_Ngadikan,Jalan Ngadikan,Tier 3,116,22,138,success,baseline_approx
+R114_Jalan_Tirtamarta,Jalan Tirtamarta,Tier 2,2404,119,2523,success,baseline_approx
+R115_Jalan_Perwakilan,Jalan Perwakilan,Tier 3,85,17,102,success,baseline_approx
+R116_Jalan_Alamanda,Jalan Alamanda,Tier 2,1097,106,1203,success,baseline_approx
+R117_Jalan_Wardani,Jalan Wardani,Tier 2,922,104,1026,success,baseline_approx
+R118_Jalan_Jati_Ngali,Jalan Jati Ngali,Tier 3,162,17,179,success,baseline_approx
+R119_Jalan_Flamboyan,Jalan Flamboyan,Tier 2,1600,110,1710,success,baseline_approx

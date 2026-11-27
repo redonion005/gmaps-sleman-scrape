@@ -1,0 +1,11 @@
+FROM browseruse/browser-use:latest
+
+# Install additional dependencies
+RUN pip install pandas
+
+# Copy scraper script
+COPY scrape_in_container.py /app/scrape.py
+
+WORKDIR /app
+
+ENTRYPOINT ["python", "/app/scrape.py"]

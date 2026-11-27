@@ -1,0 +1,28 @@
+# Data artifacts (generated, not source)
+data/overnight/
+data/pilot/
+config/full_scrape_plan.json
+config/sampling_points.jsonl
+config/work_queue.json
+*.jsonl
+!config/full_scrape_plan_2day.json
+!config/full_scrape_plan_2day_chunk_*.json
+!config/corridor_point_counts.csv
+!config/corridors.jsonl
+!config/corridors.geojson
+!config/pilot_selection.json
+!config/query_catalog.json
+!config/pilot_sampling_points.jsonl
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

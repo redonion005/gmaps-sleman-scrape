@@ -1,0 +1,138 @@
+name: Google Maps Parallel Scrape
+
+on:
+  workflow_dispatch:
+    inputs:
+      parallel_jobs:
+        description: 'Number of parallel jobs (max 8)'
+        required: true
+        default: '4'
+        type: choice
+        options: ['2', '4', '6', '8']
+      chunk_size:
+        description: 'Points per job'
+        required: true
+        default: '620'
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  scrape:
+    name: Scrape Chunk ${{ matrix.chunk }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6 hours max per job
+    strategy:
+      fail-fast: false
+      matrix:
+        chunk: [0, 1, 2, 3]  # 4 chunks = 4 parallel jobs
+        # chunk: [0, 1, 2, 3, 4, 5, 6, 7]  # 8 chunks for 8 jobs
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download chunk data
+        run: |
+          # In real use, chunks would be in repo or downloaded
+          # For now, we'll generate them from the plan
+          echo "Chunk ${{ matrix.chunk }} assigned"
+
+      - name: Set up Docker
+        uses: docker/setup-buildx-action@v3
+
+      - name: Run browser-use scraper
+        run: |
+          docker run --rm \
+            -v ${{ github.workspace }}/data:/app/data \
+            -v ${{ github.workspace }}/config:/app/config \
+            -v ${{ github.workspace }}/scrape_chunk_${{ matrix.chunk }}.py:/app/scrape.py \
+            browseruse/browser-use:latest \
+            python /app/scrape.py
+        env:
+          CHUNK_ID: ${{ matrix.chunk }}
+          QUERIES: 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera'
+          HEADLESS: 'true'
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: scrape-results-chunk-${{ matrix.chunk }}
+          path: |
+            data/overnight/results/full_scrape_results.jsonl
+            config/full_scrape_plan.json
+          retention-days: 7
+
+  merge:
+    name: Merge & Deduplicate
+    needs: scrape
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Merge and deduplicate
+        run: |
+          python3 << 'EOF'
+          import pandas as pd
+          import json
+          import glob
+          
+          # Combine all JSONL files
+          all_files = glob.glob('artifacts/**/full_scrape_results.jsonl', recursive=True)
+          dfs = []
+          for f in all_files:
+              df = pd.read_json(f, lines=True)
+              dfs.append(df)
+          
+          if dfs:
+              combined = pd.concat(dfs, ignore_index=True)
+              print(f"Combined: {len(combined)} rows")
+              
+              # Deduplicate by place_id
+              combined['completeness'] = combined[['venue_url','place_id','cid','rating','name']].notna().sum(axis=1)
+              deduped = combined.sort_values('completeness', ascending=False).drop_duplicates('place_id', keep='first')
+              print(f"After dedup: {len(deduped)} unique venues")
+              
+              # Save master
+              deduped.to_csv('competitive_map_master.csv', index=False)
+              print("Saved: competitive_map_master.csv")
+              
+              # Stats
+              print(f"Corridors: {deduped['corridor_id'].nunique()}")
+              for col in ['venue_url','place_id','cid','rating','name']:
+                  print(f"  {col}: {deduped[col].notna().mean()*100:.1f}%")
+          else:
+              print("No results found")
+        shell: bash
+
+      - name: Upload master CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: competitive-map-master
+          path: competitive_map_master.csv
+          retention-days: 30
+
+      - name: Summary
+        run: |
+          echo "## Scrape Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          python3 << 'EOF'
+          import pandas as pd
+          try:
+              df = pd.read_csv('competitive_map_master.csv')
+              print(f"| Unique Venues | {len(df)} |")
+              print(f"| Corridors Covered | {df['corridor_id'].nunique()} |")
+              print(f"| Venue URL Coverage | {df['venue_url'].notna().mean()*100:.1f}% |")
+              print(f"| Place ID Coverage | {df['place_id'].notna().mean()*100:.1f}% |")
+              print(f"| CID Coverage | {df['cid'].notna().mean()*100:.1f}% |")
+          except:
+              print("| Status | Running |")
+          EOF
+          >> $GITHUB_STEP_SUMMARY

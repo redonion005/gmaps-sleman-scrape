@@ -1,0 +1,129 @@
+{
+  "query_categories": {
+    "makanan_minuman": [
+      "restoran",
+      "warung makan",
+      "rumah makan",
+      "kafe",
+      "kedai kopi",
+      "bakery",
+      "toko roti",
+      "toko kue",
+      "donat",
+      "pujasera",
+      "warmindo",
+      "angkringan",
+      "bakso",
+      "mie",
+      "soto",
+      "ayam geprek",
+      "seafood",
+      "gudeg",
+      "sate",
+      "padang",
+      "chinese food",
+      "jepang",
+      "korea"
+    ],
+    "retail": [
+      "minimarket",
+      "indomaret",
+      "alfamart",
+      "alfamidi",
+      "circle k",
+      "lawson",
+      "supermarket",
+      "superindo",
+      "toko kelontong",
+      "toko oleh-oleh",
+      "toko"
+    ],
+    "brand_kopi": [
+      "starbucks",
+      "kopi kenangan",
+      "janji jiwa",
+      "fore",
+      "tomoro",
+      "excelso",
+      "kopi tuku",
+      "j.co"
+    ],
+    "brand_fastfood": [
+      "kfc",
+      "mcdonald's",
+      "pizza hut",
+      "hokben",
+      "burger king",
+      "solaria"
+    ],
+    "otomotif": [
+      "cuci motor",
+      "cuci mobil",
+      "bengkel",
+      "spbu",
+      "rental motor",
+      "rental mobil",
+      "derek"
+    ],
+    "jasa_personal": [
+      "photobooth",
+      "studio foto",
+      "laundry",
+      "salon",
+      "barbershop",
+      "percetakan",
+      "fotokopi",
+      "kurir",
+      "ekspedisi"
+    ],
+    "hunian": [
+      "kos",
+      "kost",
+      "hotel",
+      "penginapan",
+      "homestay",
+      "guest house"
+    ],
+    "kesehatan": [
+      "klinik",
+      "apotek",
+      "dokter",
+      "rumah sakit"
+    ],
+    "pendidikan": [
+      "sekolah",
+      "kursus",
+      "bimbel"
+    ],
+    "profesional_keuangan": [
+      "kantor",
+      "coworking",
+      "bank",
+      "atm"
+    ],
+    "hiburan": [
+      "bar",
+      "bioskop",
+      "board game cafe",
+      "taman bermain",
+      "wisata"
+    ],
+    "lainnya": [
+      "masjid",
+      "pasar",
+      "mall",
+      "toko bunga",
+      "toko elektronik"
+    ]
+  },
+  "query_priority": {
+    "pilot": "all",
+    "production": "optimized"
+  },
+  "metadata": {
+    "total_queries": 70,
+    "categories": 13,
+    "version": "1.0",
+    "source": "pasted_requirements"
+  }
+}

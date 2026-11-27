@@ -1,0 +1,1006 @@
+{
+  "pilot_corridors": [
+    "R055_Jalan_Sawit_Sari",
+    "R053_Jalan_Teknika_Utara",
+    "R066_Jalan_Pandega_Marta"
+  ],
+  "analysis": {
+    "query_performance": {
+      "restoran": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "warung makan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "rumah makan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kafe": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kedai kopi": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bakery": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko roti": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko kue": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "donat": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "pujasera": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "warmindo": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "angkringan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bakso": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "mie": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "soto": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "ayam geprek": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "seafood": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "gudeg": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "sate": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "padang": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "chinese food": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "jepang": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "korea": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "minimarket": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "indomaret": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "alfamart": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "alfamidi": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "circle k": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "lawson": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "supermarket": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "superindo": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko kelontong": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko oleh-oleh": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "starbucks": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kopi kenangan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "janji jiwa": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "fore": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "tomoro": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "excelso": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kopi tuku": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "j.co": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kfc": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "mcdonald's": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "pizza hut": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "hokben": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "burger king": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "solaria": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "cuci motor": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "cuci mobil": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bengkel": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "spbu": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "rental motor": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "rental mobil": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "derek": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "photobooth": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "studio foto": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "laundry": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "salon": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "barbershop": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "percetakan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "fotokopi": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kurir": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "ekspedisi": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kos": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kost": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "hotel": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "penginapan": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "homestay": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "guest house": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "klinik": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "apotek": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "dokter": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "rumah sakit": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "sekolah": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kursus": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bimbel": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "kantor": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "coworking": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bank": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "atm": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bar": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "bioskop": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "board game cafe": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "taman bermain": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "wisata": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "masjid": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "pasar": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "mall": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko bunga": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      },
+      "toko elektronik": {
+        "new_venues": 4635,
+        "total_results": 4635,
+        "corridors": [
+          "R055_Jalan_Sawit_Sari",
+          "R053_Jalan_Teknika_Utara",
+          "R066_Jalan_Pandega_Marta"
+        ]
+      }
+    },
+    "productive_queries": [
+      "restoran",
+      "warung makan",
+      "rumah makan",
+      "kafe",
+      "kedai kopi",
+      "bakery",
+      "toko roti",
+      "toko kue",
+      "donat",
+      "pujasera",
+      "warmindo",
+      "angkringan",
+      "bakso",
+      "mie",
+      "soto",
+      "ayam geprek",
+      "seafood",
+      "gudeg",
+      "sate",
+      "padang",
+      "chinese food",
+      "jepang",
+      "korea",
+      "minimarket",
+      "indomaret",
+      "alfamart",
+      "alfamidi",
+      "circle k",
+      "lawson",
+      "supermarket",
+      "superindo",
+      "toko kelontong",
+      "toko oleh-oleh",
+      "toko",
+      "starbucks",
+      "kopi kenangan",
+      "janji jiwa",
+      "fore",
+      "tomoro",
+      "excelso",
+      "kopi tuku",
+      "j.co",
+      "kfc",
+      "mcdonald's",
+      "pizza hut",
+      "hokben",
+      "burger king",
+      "solaria",
+      "cuci motor",
+      "cuci mobil",
+      "bengkel",
+      "spbu",
+      "rental motor",
+      "rental mobil",
+      "derek",
+      "photobooth",
+      "studio foto",
+      "laundry",
+      "salon",
+      "barbershop",
+      "percetakan",
+      "fotokopi",
+      "kurir",
+      "ekspedisi",
+      "kos",
+      "kost",
+      "hotel",
+      "penginapan",
+      "homestay",
+      "guest house",
+      "klinik",
+      "apotek",
+      "dokter",
+      "rumah sakit",
+      "sekolah",
+      "kursus",
+      "bimbel",
+      "kantor",
+      "coworking",
+      "bank",
+      "atm",
+      "bar",
+      "bioskop",
+      "board game cafe",
+      "taman bermain",
+      "wisata",
+      "masjid",
+      "pasar",
+      "mall",
+      "toko bunga",
+      "toko elektronik"
+    ],
+    "zero_yield_queries": [],
+    "recommended_production_queries": [
+      "restoran",
+      "warung makan",
+      "rumah makan",
+      "kafe",
+      "kedai kopi",
+      "bakery",
+      "toko roti",
+      "toko kue",
+      "donat",
+      "pujasera",
+      "warmindo",
+      "angkringan",
+      "bakso",
+      "mie",
+      "soto",
+      "ayam geprek",
+      "seafood",
+      "gudeg",
+      "sate",
+      "padang",
+      "chinese food",
+      "jepang",
+      "korea",
+      "minimarket",
+      "indomaret",
+      "alfamart",
+      "alfamidi",
+      "circle k",
+      "lawson",
+      "supermarket",
+      "superindo",
+      "toko kelontong",
+      "toko oleh-oleh",
+      "toko",
+      "starbucks",
+      "kopi kenangan",
+      "janji jiwa",
+      "fore",
+      "tomoro",
+      "excelso",
+      "kopi tuku",
+      "j.co",
+      "kfc",
+      "mcdonald's",
+      "pizza hut",
+      "hokben",
+      "burger king",
+      "solaria",
+      "cuci motor",
+      "cuci mobil",
+      "bengkel",
+      "spbu",
+      "rental motor",
+      "rental mobil",
+      "derek",
+      "photobooth",
+      "studio foto",
+      "laundry",
+      "salon",
+      "barbershop",
+      "percetakan",
+      "fotokopi",
+      "kurir",
+      "ekspedisi",
+      "kos",
+      "kost",
+      "hotel",
+      "penginapan",
+      "homestay",
+      "guest house",
+      "klinik",
+      "apotek"
+    ],
+    "summary": {
+      "total_queries_tested": 91,
+      "productive_queries": 91,
+      "zero_yield_queries": 0,
+      "recommended_count": 72,
+      "total_scraped_results": 421785
+    }
+  },
+  "timestamp": "2026-11-26T00:40:02.163170"
+}

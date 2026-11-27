@@ -1,0 +1,38 @@
+# Browser Automation Config
+BROWSER_SESSION: "gmaps_sweep"
+MAX_CONCURRENT_SESSIONS: 3
+
+# Timing
+NAVIGATION_TIMEOUT: 30
+INITIAL_WAIT: 3
+SCROLL_ROUNDS: 20
+SCROLL_WAIT: 1.5
+EXTRACTION_WAIT: 1
+
+# Rate Limiting
+MIN_DELAY_BETWEEN_SEARCHES: 5
+MAX_DELAY_BETWEEN_SEARCHES: 10
+CAPTCHA_WAIT: 60
+
+# Geometry
+SAMPLING_INTERVAL_M: 300
+BASELINE_BUFFER_M: 400
+DEDUP_RADIUS_M: 15
+TRUNCATION_DETECTION_THRESHOLD: 3
+TRUNCATION_SIGNATURES: [20, 52, 60, 65]
+
+# Search
+SEARCH_ZOOM: 16
+MAX_RESULTS_PER_SEARCH: 100
+
+# Paths
+BASELINE_CSV: "C:/Users/Eromo/Downloads/venues_classified.csv"
+CORRIDORS_JSONL: "C:/Users/Eromo/Downloads/Yogyakarta Project/01_raw_data/gmaps_road_results_all.jsonl"
+OUTPUT_DIR: "./outputs"
+CACHE_DIR: "./cache"
+LOG_DIR: "./logs"
+
+# Pilot Selection (auto if not overridden)
+PILOT_TIER1_CORRIDOR: ""  # e.g., "R007_Jalan_Kaliurang"
+PILOT_TIER2_CORRIDOR: ""  # e.g., "R047_Jalan_Munggur"
+PILOT_TIER3_CORRIDOR: ""  # e.g., "R078_Plemburan"
