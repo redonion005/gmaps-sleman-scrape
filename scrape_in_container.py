@@ -11,7 +11,7 @@ import os
 import sys
 import time
 
-from browser_use import Agent, Browser, BrowserConfig
+from browser_use import Agent, Browser
 
 # Paths (from environment variables, with defaults for local testing)
 CHUNK_FILE = os.environ.get('CHUNK_FILE', f"config/full_scrape_plan_2day_chunk_{os.environ.get('CHUNK_ID', '0')}.json")
@@ -105,11 +105,11 @@ async def main():
     master_lookup = {(p['corridor_id'], p['point_id']): i for i, p in enumerate(master_plan)}
 
     # Headless browser (already in container)
-    browser = Browser(config=BrowserConfig(
+    browser = Browser(
         headless=True,
         disable_security=True,
         args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
-    ))
+    )
 
     print(f"Points: {len(chunk)} | Queries: {len(QUERIES)} | Headless: True")
     completed = 0
