@@ -13,10 +13,10 @@ import time
 
 from browser_use import Agent, Browser, BrowserConfig
 
-# Paths (mounted volumes)
-CHUNK_FILE = f"/config/full_scrape_plan_2day_chunk_{os.environ.get('CHUNK_ID', '0')}.json"
-RESULTS_FILE = "/data/overnight/results/full_scrape_results.jsonl"
-MASTER_PLAN_FILE = "/config/full_scrape_plan.json"
+# Paths (from environment variables, with defaults for local testing)
+CHUNK_FILE = os.environ.get('CHUNK_FILE', f"config/full_scrape_plan_2day_chunk_{os.environ.get('CHUNK_ID', '0')}.json")
+RESULTS_FILE = os.environ.get('RESULTS_FILE', "data/overnight/results/full_scrape_results.jsonl")
+MASTER_PLAN_FILE = os.environ.get('MASTER_PLAN_FILE', "config/full_scrape_plan_2day.json")
 
 # 6 core queries (optimized)
 QUERIES = os.environ.get('QUERIES', 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera').split(',')

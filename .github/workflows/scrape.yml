@@ -23,37 +23,39 @@ jobs:
   scrape:
     name: Scrape Chunk ${{ matrix.chunk }}
     runs-on: ubuntu-latest
-    timeout-minutes: 360  # 6 hours max per job
+    timeout-minutes: 360
     strategy:
       fail-fast: false
       matrix:
-        chunk: [0, 1, 2, 3]  # 4 chunks = 4 parallel jobs
-        # chunk: [0, 1, 2, 3, 4, 5, 6, 7]  # 8 chunks for 8 jobs
+        chunk: [0, 1, 2, 3]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download chunk data
-        run: |
-          # In real use, chunks would be in repo or downloaded
-          # For now, we'll generate them from the plan
-          echo "Chunk ${{ matrix.chunk }} assigned"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Set up Docker
-        uses: docker/setup-buildx-action@v3
-
-      - name: Run browser-use scraper
+      - name: Install system dependencies
         run: |
-          docker run --rm \
-            -v ${{ github.workspace }}/data:/app/data \
-            -v ${{ github.workspace }}/config:/app/config \
-            -v ${{ github.workspace }}/scrape_chunk_${{ matrix.chunk }}.py:/app/scrape.py \
-            browseruse/browser-use:latest \
-            python /app/scrape.py
+          sudo apt-get update
+          sudo apt-get install -y chromium chromium-driver
+
+      - name: Install Python dependencies
+        run: |
+          pip install --no-cache-dir browser-use pandas pydantic
+
+      - name: Run scraper
+        run: |
+          python scrape_in_container.py
         env:
           CHUNK_ID: ${{ matrix.chunk }}
           QUERIES: 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera'
           HEADLESS: 'true'
+          CHUNK_FILE: config/full_scrape_plan_2day_chunk_${{ matrix.chunk }}.json
+          MASTER_PLAN_FILE: config/full_scrape_plan_2day.json
+          RESULTS_FILE: data/overnight/results/full_scrape_results.jsonl
 
       - name: Upload results
         uses: actions/upload-artifact@v4
@@ -61,7 +63,7 @@ jobs:
           name: scrape-results-chunk-${{ matrix.chunk }}
           path: |
             data/overnight/results/full_scrape_results.jsonl
-            config/full_scrape_plan.json
+            config/full_scrape_plan_2day.json
           retention-days: 7
 
   merge:
@@ -81,28 +83,24 @@ jobs:
           import pandas as pd
           import json
           import glob
-          
-          # Combine all JSONL files
+
           all_files = glob.glob('artifacts/**/full_scrape_results.jsonl', recursive=True)
           dfs = []
           for f in all_files:
               df = pd.read_json(f, lines=True)
               dfs.append(df)
-          
+
           if dfs:
               combined = pd.concat(dfs, ignore_index=True)
               print(f"Combined: {len(combined)} rows")
-              
-              # Deduplicate by place_id
+
               combined['completeness'] = combined[['venue_url','place_id','cid','rating','name']].notna().sum(axis=1)
               deduped = combined.sort_values('completeness', ascending=False).drop_duplicates('place_id', keep='first')
               print(f"After dedup: {len(deduped)} unique venues")
-              
-              # Save master
+
               deduped.to_csv('competitive_map_master.csv', index=False)
               print("Saved: competitive_map_master.csv")
-              
-              # Stats
+
               print(f"Corridors: {deduped['corridor_id'].nunique()}")
               for col in ['venue_url','place_id','cid','rating','name']:
                   print(f"  {col}: {deduped[col].notna().mean()*100:.1f}%")
