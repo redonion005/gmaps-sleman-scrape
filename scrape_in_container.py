@@ -105,10 +105,7 @@ async def main():
     master_lookup = {(p['corridor_id'], p['point_id']): i for i, p in enumerate(master_plan)}
 
     # Headless browser (already in container)
-    browser = Browser(
-        headless=True,
-        args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
-    )
+    browser = Browser('chromium')
 
     print(f"Points: {len(chunk)} | Queries: {len(QUERIES)} | Headless: True")
     completed = 0
