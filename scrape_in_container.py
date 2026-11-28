@@ -17,8 +17,8 @@ CHUNK_FILE = os.environ.get('CHUNK_FILE', f"config/full_scrape_plan_2day_chunk_{
 RESULTS_FILE = os.environ.get('RESULTS_FILE', "data/overnight/results/full_scrape_results.jsonl")
 MASTER_PLAN_FILE = os.environ.get('MASTER_PLAN_FILE', "config/full_scrape_plan_2day.json")
 
-# 6 core queries (optimized)
-QUERIES = os.environ.get('QUERIES', 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera').split(',')
+# Broad search to capture ALL venue types at location
+QUERIES = os.environ.get('QUERIES', 'tempat,wisata,bisnis,layanan,belanja,hiburan,makanan,minuman,olahraga,keagamaan,pendidikan,kesehatan,transportasi,akomodasi').split(',')
 
 EXTRACT_JS = r"""
 (() => {
@@ -52,20 +52,27 @@ EXTRACT_JS = r"""
 
 async def scrape_point(page, pt: dict) -> list:
     point_results = []
+    seen_urls = set()
 
     for query in QUERIES:
         search_url = f"https://www.google.com/maps/search/{query}/@{pt['lat']},{pt['lng']},16z"
         await page.goto(search_url, wait_until='domcontentloaded', timeout=60000)
         await page.wait_for_timeout(3000)
 
-        # Fast extract: 1 scroll
-        await page.evaluate("window.scrollBy(0, 3000)")
-        await page.wait_for_timeout(2000)
+        # Multiple scrolls for broader coverage
+        for _ in range(3):
+            await page.evaluate("window.scrollBy(0, 3000)")
+            await page.wait_for_timeout(2000)
 
         result = await page.evaluate(EXTRACT_JS)
         venues = json.loads(result) if result else []
 
         for v in venues:
+            # Deduplicate by venue_url
+            if v['venue_url'] in seen_urls:
+                continue
+            seen_urls.add(v['venue_url'])
+            
             v.update({
                 'query': query,
                 'corridor_id': pt['corridor_id'],
@@ -77,7 +84,7 @@ async def scrape_point(page, pt: dict) -> list:
             })
             point_results.append(v)
 
-        print(f"    {query}: {len(venues)} venues")
+        print(f"    {query}: {len(venues)} venues (unique: {len(point_results)})")
         await page.wait_for_timeout(500)
 
     return point_results
