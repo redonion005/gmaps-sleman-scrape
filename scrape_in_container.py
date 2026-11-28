@@ -110,9 +110,34 @@ async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=True,
-            args=['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
+            args=[
+                '--no-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-gpu',
+                '--disable-blink-features=AutomationControlled',
+                '--disable-features=IsolateOrigins,site-per-process',
+                '--disable-site-isolation-trials',
+            ]
         )
-        context = await browser.new_context()
+        
+        # Anti-detection: realistic context
+        context = await browser.new_context(
+            viewport={'width': 1920, 'height': 1080},
+            user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+            locale='id-ID',
+            timezone_id='Asia/Jakarta',
+            geolocation={'latitude': -7.8, 'longitude': 110.4},  # Yogyakarta
+            permissions=['geolocation'],
+        )
+        
+        # Hide webdriver flag
+        await context.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+            window.chrome = {runtime: {}};
+            Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});
+            Object.defineProperty(navigator, 'languages', {get: () => ['id-ID', 'id', 'en-US', 'en']});
+        """)
+        
         page = await context.new_page()
 
         completed = 0
@@ -149,7 +174,9 @@ async def main():
             pt['venues_found'] = len(venues)
             completed += 1
 
-            # Progress
+            # Random human-like delay between points
+            await page.wait_for_timeout(2000 + (hash(str(pt['point_id'])) % 3000))
+
             if completed % 20 == 0:
                 elapsed = time.time() - start_time
                 rate = completed / elapsed * 3600
