@@ -48,7 +48,7 @@ jobs:
           python scrape_in_container.py
         env:
           CHUNK_ID: ${{ matrix.chunk }}
-          QUERIES: 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera'
+          QUERIES: 'tempat,wisata,bisnis,layanan,belanja,hiburan,makanan,minuman,olahraga,keagamaan,pendidikan,kesehatan,transportasi,akomodasi'
           HEADLESS: 'true'
           CHUNK_FILE: config/full_scrape_plan_2day_chunk_${{ matrix.chunk }}.json
           MASTER_PLAN_FILE: config/full_scrape_plan_2day.json
