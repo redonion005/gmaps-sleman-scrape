@@ -44,7 +44,8 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          pip install --no-cache-dir browser-use pandas pydantic
+          pip install --no-cache-dir playwright pandas pydantic
+          playwright install chromium
 
       - name: Run scraper
         run: |
