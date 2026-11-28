@@ -97,6 +97,9 @@ async def main():
 
     print(f"Points: {len(chunk)} | Queries: {len(QUERIES)}")
 
+    # Ensure results directory exists
+    os.makedirs(os.path.dirname(RESULTS_FILE), exist_ok=True)
+
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=True,
