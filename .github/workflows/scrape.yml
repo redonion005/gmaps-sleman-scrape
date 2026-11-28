@@ -39,12 +39,8 @@ jobs:
 
       - name: Install system dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium chromium-driver
-
-      - name: Install Python dependencies
-        run: |
           pip install --no-cache-dir playwright pandas pydantic
+          playwright install-deps chromium
           playwright install chromium
 
       - name: Run scraper

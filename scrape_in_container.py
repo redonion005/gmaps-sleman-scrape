@@ -55,12 +55,12 @@ async def scrape_point(page, pt: dict) -> list:
 
     for query in QUERIES:
         search_url = f"https://www.google.com/maps/search/{query}/@{pt['lat']},{pt['lng']},16z"
-        await page.goto(search_url, wait_until='networkidle', timeout=30000)
-        await page.wait_for_timeout(2000)
+        await page.goto(search_url, wait_until='domcontentloaded', timeout=60000)
+        await page.wait_for_timeout(3000)
 
         # Fast extract: 1 scroll
         await page.evaluate("window.scrollBy(0, 3000)")
-        await page.wait_for_timeout(1500)
+        await page.wait_for_timeout(2000)
 
         result = await page.evaluate(EXTRACT_JS)
         venues = json.loads(result) if result else []
