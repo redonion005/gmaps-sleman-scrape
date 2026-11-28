@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """
 Container-optimized scraper for GitHub Actions
-Runs inside browseruse/browser-use Docker image
-Mounts: /data (results), /config (plans)
+Uses browser-use 1.0 Agent API
 """
 
 import asyncio
 import json
 import os
+import re
 import sys
 import time
 
-from browser_use import Agent, Browser
+from browser_use import Agent
+from langchain_openai import ChatOpenAI
 
 # Paths (from environment variables, with defaults for local testing)
 CHUNK_FILE = os.environ.get('CHUNK_FILE', f"config/full_scrape_plan_2day_chunk_{os.environ.get('CHUNK_ID', '0')}.json")
@@ -21,54 +22,38 @@ MASTER_PLAN_FILE = os.environ.get('MASTER_PLAN_FILE', "config/full_scrape_plan_2
 # 6 core queries (optimized)
 QUERIES = os.environ.get('QUERIES', 'restoran,kafe,kedai kopi,bakery,toko roti,pujasera').split(',')
 
-EXTRACT_JS = r"""
-(() => {
-    const articles = document.querySelectorAll('[role=article]');
-    const results = [];
-    for (const article of articles) {
-        const link = article.querySelector('a.hfpxzc') || article.querySelector('a[href*="/maps/place/"]');
-        if (!link) continue;
-        const name = link.getAttribute('aria-label') || '';
-        const href = link.href || '';
-        let lat = null, lng = null, place_id = null, cid = null;
-        if (href) {
-            const latMatch = href.match(/!3d(-?[\d.]+)/);
-            const lngMatch = href.match(/!4d(-?[\d.]+)/);
-            const placeMatch = href.match(/19s(ChIJ[^!&?]+)/);
-            const cidMatch = href.match(/1s0x[^:]+:0x([0-9a-f]+)/);
-            if (latMatch) lat = parseFloat(latMatch[1]);
-            if (lngMatch) lng = parseFloat(lngMatch[1]);
-            if (placeMatch) place_id = placeMatch[1];
-            if (cidMatch) cid = cidMatch[1];
-        }
-        if (lat === null || lng === null) continue;
-        const text = article.textContent || '';
-        const ratingMatch = text.match(/(\d+[,.]\d)/);
-        const rating = ratingMatch ? ratingMatch[1].replace(',', '.') : '';
-        results.push({name, venue_url: href, place_id, cid, rating: rating ? parseFloat(rating) : null, rating_raw: ratingMatch ? ratingMatch[1] : '', lat, lng});
-    }
-    return JSON.stringify(results);
-})()
-"""
+# Use a dummy LLM - we'll use the agent's built-in extraction
+llm = ChatOpenAI(model="gpt-4o-mini", api_key=os.environ.get("OPENAI_API_KEY", "dummy"))
 
-async def scrape_point(browser: Browser, pt: dict) -> list:
-    context = await browser.new_context()
-    page = await context.new_page()
+async def scrape_point(pt: dict) -> list:
     point_results = []
 
-    try:
-        for query in QUERIES:
-            search_url = f"https://www.google.com/maps/search/{query}/@{pt['lat']},{pt['lng']},16z"
-            await page.goto(search_url, wait_until='networkidle', timeout=30000)
-            await page.wait_for_timeout(2000)
-
-            # Fast extract: 1 scroll
-            await page.evaluate("window.scrollBy(0, 3000)")
-            await page.wait_for_timeout(1500)
-
-            result = await page.evaluate(EXTRACT_JS)
-            venues = json.loads(result) if result else []
-
+    for query in QUERIES:
+        search_url = f"https://www.google.com/maps/search/{query}/@{pt['lat']},{pt['lng']},16z"
+        
+        task = f"""
+        Go to {search_url}
+        Wait for the map results to load completely
+        Scroll down once to load more listings
+        Extract all business listings from the page as JSON with these fields:
+        name, venue_url, place_id, cid, lat, lng, rating
+        Return ONLY a JSON array of objects.
+        """
+        
+        agent = Agent(
+            task=task,
+            llm=llm,
+        )
+        
+        try:
+            result = await agent.run()
+            # Parse result - extract JSON array
+            venues = []
+            if result:
+                json_match = re.search(r'\[.*\]', str(result), re.DOTALL)
+                if json_match:
+                    venues = json.loads(json_match.group())
+            
             for v in venues:
                 v.update({
                     'query': query,
@@ -80,14 +65,13 @@ async def scrape_point(browser: Browser, pt: dict) -> list:
                     'source': 'browser_full_scrape'
                 })
                 point_results.append(v)
-
+            
             print(f"    {query}: {len(venues)} venues")
-            await page.wait_for_timeout(500)
-
-    except Exception as e:
-        print(f"    ERROR: {e}")
-    finally:
-        await context.close()
+            
+        except Exception as e:
+            print(f"    ERROR {query}: {e}")
+        
+        await asyncio.sleep(1)  # Rate limiting
 
     return point_results
 
@@ -104,10 +88,7 @@ async def main():
 
     master_lookup = {(p['corridor_id'], p['point_id']): i for i, p in enumerate(master_plan)}
 
-    # Headless browser (already in container)
-    browser = Browser('chromium')
-
-    print(f"Points: {len(chunk)} | Queries: {len(QUERIES)} | Headless: True")
+    print(f"Points: {len(chunk)} | Queries: {len(QUERIES)}")
     completed = 0
     start_time = time.time()
 
@@ -118,7 +99,7 @@ async def main():
 
         print(f"  [{completed+1}/{len(chunk)}] {pt['point_id']} - {pt['corridor_id']}")
 
-        venues = await scrape_point(browser, pt)
+        venues = await scrape_point(pt)
 
         # Append results (atomic append)
         with open(RESULTS_FILE, 'a', encoding='utf-8') as f:
@@ -148,8 +129,6 @@ async def main():
             rate = completed / elapsed * 3600
             eta = (len(chunk) - completed) / rate if rate > 0 else 0
             print(f"    Progress: {completed}/{len(chunk)} | {rate:.1f} pts/hr | ETA: {eta:.1f} hrs")
-
-    await browser.close()
 
     # Final save
     with open(MASTER_PLAN_FILE, 'w') as f:
